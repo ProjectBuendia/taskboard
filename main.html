@@ -1,0 +1,49 @@
+<title>Taskboard</title>
+<script src="/static/jquery-2.1.1.min.js"></script>
+<script src="/static/taskboard.js"></script>
+<style>
+  * { box-sizing: border-box; }
+  #window { position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
+  #window { cursor: default; height: 100%; }
+  #board { display: table; }
+  #board, #list { height: 100%; background: #444; padding-left: 1em; }
+  #tabs { position: relative; background: #000; }
+  #tablist { background: #444; }
+
+  .tab, .cell, .item {
+    font-family: Roboto, Helvetica, Arial;
+    font-weight: 400;
+    font-size: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  .cell { display: table-cell; height: 100%; vertical-align: top; }
+  .tab { white-space: nowrap; padding: 0.2em 1em 0.2em 0.2em; }
+  .cell { text-align: center; display: inline-block; }
+
+  #window { color: #ccc; background: #000; }
+  .cell { background: #444; }
+  .cell.on { color: #000; background: #fff; }
+  .tab { color: #444; background: #000; }
+  .tab.on { color: #fff; }
+  .tab.on:after { content: '*'; }
+  .tab.selected { color: #fff; background: #444; }
+  .tab.above-selected { border-radius: 0 0 16px 0; }
+  .tab.below-selected { border-radius: 0 16px 0 0; }
+
+  .tab { border-width: 8px 0 8px 8px; }
+  .cell { border: 2px solid #444; padding: 0.2em; border-radius: 8px; }
+</style>
+<table id="window" cellspacing=0 cellpadding=0 border=0>
+  <tr valign="top">
+    <td width="1%" id="tabs">
+      <div id="tablist"></div>
+    </td>
+    <td width="99%">
+      <div id="board"></div>
+      <div id="list"></div>
+    </td>
+  </tr>
+</table>
