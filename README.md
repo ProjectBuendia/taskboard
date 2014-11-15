@@ -15,10 +15,24 @@ Typical use: tabs are locations, buttons are tasks to be done (e.g. cleaning
 needed in Tent 2).  Or buttons are resources in use or available (e.g. Bed 5
 in use in Tent 3).
 
-To do:
+Setup
+-----
+
+Requires Python 2.7 and Flask.  Install flask with 'pip install flask'.
+
+Before first use, initialize the database with 'python reset.py'.
+
+Start the server with 'python app.py'.  Then open http://<hostname>:5000/
+to use the taskboard.
+
+To do
+-----
+
   - Add shared counters (e.g. number of beds available) with "+" and "-"
     buttons to increment and decrement, and total count shown on the "ALL" tab.
   - Add simple editing functions (add/remove buttons, edit button labels,
     add/remove tabs, edit tab labels).
   - Automatically scale the text font size to fit the size of the window and
     number of buttons, for maximum visibility on a variety of screen sizes.
+
+
