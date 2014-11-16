@@ -17,19 +17,14 @@ board_data = {
       '6': 'Tent 6',
     }
   },
-  'counters': {
-    'order': [1, 2],
-    'labels': {
-      '1': 'Beds available',
-      '2': ''
-    }
-  },
   'cells': {
     'layout': [
       # cell IDs not starting with 'r' are tasks, listed in the ALL tab
       [1, 2, 3, 4],
       [5, 6, 7, 8],
       [],
+      # cell IDs starting with 'c' are counters rather than tasks
+      ['c1'],
       # cell IDs starting with 'r' are resources rather than tasks
       ['r1', 'r2', 'r3', 'r4', 'r5'],
       ['r6', 'r7', 'r8', 'r9', 'r10'],
@@ -43,6 +38,7 @@ board_data = {
       '6': 'Chlorine refill needed',
       '7': 'Mop needed',
       '8': '',
+      'c1': 'Beds available',
       'r1': 'Bed 1 in use',
       'r2': 'Bed 2 in use',
       'r3': 'Bed 3 in use',

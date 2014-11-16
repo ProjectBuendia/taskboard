@@ -22,7 +22,7 @@ Requires Python 2.7 and Flask.  Install flask with 'pip install flask'.
 
 Before first use, initialize the database with 'python reset.py'.
 
-Start the server with 'python app.py'.  Then open http://<hostname>:5000/
+Start the server with 'python app.py'.  Then open http://[hostname]:5000/
 to use the taskboard.
 
 To do
