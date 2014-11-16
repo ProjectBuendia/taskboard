@@ -28,11 +28,6 @@ to use the taskboard.
 To do
 -----
 
-  - Add shared counters (e.g. number of beds available) with "+" and "-"
-    buttons to increment and decrement, and total count shown on the "ALL" tab.
+  - Transmit changes instead of entire board state and entire cell state.
   - Add simple editing functions (add/remove buttons, edit button labels,
     add/remove tabs, edit tab labels).
-  - Automatically scale the text font size to fit the size of the window and
-    number of buttons, for maximum visibility on a variety of screen sizes.
-
-

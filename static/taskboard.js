@@ -226,10 +226,19 @@ function poll_state() {
   });
 }
 
+// Updates the font size to suit the window size.
+function update_font_size() {
+  var size1 = window.innerWidth / 30;
+  var size2 = window.innerHeight / 24;
+  $('#window').css('font-size', Math.min(size1, size2));
+};
+
 // Starts the polling loop.
 $(document).on('ready', function() {
+  update_font_size();
   poll_board();
   poll_state();
   setInterval(poll_state, 2000);
   setInterval(poll_board, 10000);
 });
+$(window).on('resize', update_font_size);
